@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Page</title>
+</head>
+<body>
+    <h1>Welcome to our E-commerce Store</h1>
+    <label for="gender">Select your gender:</label>
+    <select id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br>
+    <label for="dob">Enter your date of birth:</label>
+    <input type="date" id="dob"><br>
+    <button onclick="redirectToSection()">Go to Section</button>
+
+    <script>
+        function redirectToSection() {
+            var gender = document.getElementById("gender").value;
+            var dob = new Date(document.getElementById("dob").value);
+            var currentDate = new Date();
+            var age = currentDate.getFullYear() - dob.getFullYear();
+
+            if (gender === "Female" && age < 18) {
+                window.location.href = "girls_section.html";
+            } else if (gender === "Male" && age < 18) {
+                window.location.href = "boys_section.html";
+            } else if (gender === "Male" && age >= 18) {
+                window.location.href = "men_section.html";
+            } else if (gender === "Female" && age >= 18) {
+                window.location.href = "women_section.html";
+            } else {
+                alert("Invalid input!");
+            }
+        }
+    </script>
+</body>
+</html>

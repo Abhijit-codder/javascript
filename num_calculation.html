@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <label for="num1">Enter Number 1:</label>
+    <input type="number" id="num1"><br>
+    <label for="num2">Enter Number 2:</label>
+    <input type="number" id="num2"><br>
+    <label for="num3">Enter Number 3:</label>
+    <input type="number" id="num3"><br>
+    <button onclick="calculateMinMax()">Calculate</button><br><br>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateMinMax() {
+            // Get input values
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var num3 = parseFloat(document.getElementById("num3").value);
+
+            // Round up to the nearest integer
+            var roundedNum1 = Math.round(num1);
+            var roundedNum2 = Math.round(num2);
+            var roundedNum3 = Math.round(num3);
+
+            // Find minimum and maximum numbers
+            var minNum = Math.min(roundedNum1, roundedNum2, roundedNum3);
+            var maxNum = Math.max(roundedNum1, roundedNum2, roundedNum3);
+
+            // Find absolute values
+            var absMinNum = Math.abs(minNum);
+            var absMaxNum = Math.abs(maxNum);
+
+            // Display results
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "<p>Rounded Numbers: " + roundedNum1 + ", " + roundedNum2 + ", " + roundedNum3 + "</p>" +
+                                   "<p>Minimum Number: " + minNum + " (Absolute Value: " + absMinNum + ")</p>" +
+                                   "<p>Maximum Number: " + maxNum + " (Absolute Value: " + absMaxNum + ")</p>";
+        }
+    </script>
+</body>
+</html>
