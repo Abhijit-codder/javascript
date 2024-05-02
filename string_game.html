@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings Game</title>
+  <link rel="stylesheet" href="string_game.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Strings Game</h1>
+    <label for="stringInput">Enter a String:</label>
+    <input type="text" id="stringInput">
+    <button onclick="startGame()">Start</button>
+
+    <div id="output"></div>
+    
+    <div class="buttons">
+      <button onclick="checkPalindrome()">Palindrome</button>
+      <button onclick="reverseString()">Reverse</button>
+      <button onclick="countVowels()">Vowels</button>
+    </div>
+  </div>
+  <script src="string_game.js"></script>
+</body>
+</html>
