@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            table,th,td
+            {
+                border: 2px solid black;
+                border-collapse: collapse;
+
+            }
+            th
+            {
+                font-style: bold;
+            }
+            table
+            {
+                width: 100%;
+                text-align: center;
+            }
+            th,td{
+                border: 1px solid blue;
+            }
+            tr:nth-child(even)
+            {
+                background-color: rgb(177, 172, 172);
+            }
+            tr:hover
+            {
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Table</h1>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Time</th>
+                <th>Time</th>
+                <th>Time</th>
+
+            </tr>
+            <tr>
+                <td><b>Monday</b></td>
+                <td>Monday</td>
+                <td>Monday</td>
+                <td>Monday</td>
+            </tr>
+            <tr>
+                <td><b>Monday</b></td>
+                <td>Tuesday</td>
+                <td>Tuesday</td>
+                <td>Tuesday</td>
+            </tr>
+            <tr >
+                <td><b>Monday</b></td>
+                <td colspan="3" style="text-align: center;">wednesday</td>
+                
+
+            </tr>
+
+        </table>
+    </body>
+</html>
